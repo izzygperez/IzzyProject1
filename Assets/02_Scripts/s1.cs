@@ -6,7 +6,7 @@ public class NewBehaviourScript : MonoBehaviour
 {
     [SerializeField] int x;
     [SerializeField] float startTime;
-    [SerializeField]string yourName;
+    [SerializeField] string yourName;
     Vector3 pos;//(x,y,z)
     [SerializeField] Material newMat;
     [SerializeField] Material oldMat;
@@ -24,13 +24,13 @@ public class NewBehaviourScript : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    /*void Update()
     {
         if(Time.time-startTime >= 10.0f)
         {
             board.GetComponent<MeshRenderer>().material = newMat;
         }
-    }
+    }*/
 
     public void Score()
     {
@@ -39,6 +39,7 @@ public class NewBehaviourScript : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        
+        Debug.Log(other.gameObject.name);
+        GetComponent<MeshRenderer>().material.color = Color.blue;
     }
 }
