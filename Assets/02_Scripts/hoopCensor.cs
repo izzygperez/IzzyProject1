@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class hoopCensor : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public GameObject effectObject;
+
+    private void Start()
     {
-        
+        effectObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnTriggerEnter(Collider other)
     {
-        
+        if(other.gameObject.tag == "basketball")
+        {
+            effectObject.SetActive(true);
+        }
     }
 }
