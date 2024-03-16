@@ -186,13 +186,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'SCORE:
-
-
-    using TMPro;
-
-
-    TMP_Text '
+  m_text: 'score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2100000, guid: 79459efec17a4d00a321bdcc27bbc385, type: 2}
@@ -1230,6 +1224,7 @@ GameObject:
   - component: {fileID: 566950013}
   - component: {fileID: 566950015}
   - component: {fileID: 566950014}
+  - component: {fileID: 566950016}
   m_Layer: 0
   m_Name: hoopCensor
   m_TagString: Untagged
@@ -1266,6 +1261,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   effectObject: {fileID: 2073132253}
+  scoreScript: {fileID: 566950016}
 --- !u!65 &566950015
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1287,6 +1283,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.019861773, y: 0.037622247, z: 0.0061127194}
   m_Center: {x: 0.0030503273, y: -0.01753263, z: -0.05044943}
+--- !u!114 &566950016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566950012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acb07c2a02f300240b387c6aaf819e0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasText: {fileID: 62748248}
+  textVarible: some text
 --- !u!1 &636298347
 GameObject:
   m_ObjectHideFlags: 0
@@ -1340,7 +1350,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 2, y: 2, z: 2}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!23 &636298351
 MeshRenderer:
@@ -2609,7 +2619,7 @@ Transform:
   m_GameObject: {fileID: 977414718}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.374, y: 1.55, z: -11.772}
+  m_LocalPosition: {x: 4.475, y: 1.732, z: -11.421}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4194,14 +4204,14 @@ ParticleSystem:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2073132253}
   serializedVersion: 8
-  lengthInSec: 5
+  lengthInSec: 2
   simulationSpeed: 1
   stopAction: 0
   cullingMode: 0
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
